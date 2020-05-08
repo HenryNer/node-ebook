@@ -1,5 +1,11 @@
+const env = require('env')
+let resUrl
 //nginx路径
-const resUrl = 'http://192.168.1.108:8092'
+if (env === 'dev') {
+  resUrl = 'http://192.168.1.108:8092'
+} else {
+  resUrl = 'http://47.115.137.178'
+}
 
 const category = [
     'Biomedicine',
