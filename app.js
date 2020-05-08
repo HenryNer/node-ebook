@@ -14,9 +14,9 @@ app.get('/', (req, res) => {
 //连接数据库
 function connect() {
     return mysql.createConnection({
-        host: 'localhost',
-        user: 'root',
-        password: 'password',
+        host: constant.dbHost,
+        user: constant.dbUser,
+        password: constant.dbPwd,
         database: 'book' //database为已创建的一个数据库名称
     })
 }
